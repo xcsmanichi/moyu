@@ -149,7 +149,7 @@ errer = {
 
 router.get('/styletext', async (req, res, next) => {
     text = req.query.text
-    if (!link) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+    if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
 
        styletext(`${text}`)
         .then(data => {
