@@ -30,7 +30,7 @@ var {
     Gempa
 } = require('./../lib');
 
-var { igdwn, fbdwn, joox, tiktok, twdwn, styletext, ringtone, quotesAnime, wallpaper, wikimedia, musically, pinterest, dBinary, eBinary, jadwaltv } = require("./../lib/dwn"); //fuck siapa yang ngubah oi?
+var { igdwn, fbdwn, joox, tiktok, twdwn, styletext, ringtone, quotesAnime, wallpaper, wikimedia, musically, pinterest, dBinary, eBinary, jadwaltv, ytmp3, ytmp4 } = require("./../lib/dwn"); //fuck siapa yang ngubah oi?
 
 errer = {
     notparam: {
@@ -372,7 +372,7 @@ router.get('/ytmp4', async (req, res, next) => {
     link = req.query.link
     if (!link) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter link"})
 
-    y2.GetVideo(`${link}`)
+    ytmp4(`${link}`)
         .then(data => {
         var result = data;
              res.json({
@@ -388,7 +388,7 @@ router.get('/ytmp3', async (req, res, next) => {
     link = req.query.link
     if (!link) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter link"})
 
-    y2.GetAudio(`${link}`)
+    ytmp3(`${link}`)
         .then(data => {
         var result = data;
              res.json({
