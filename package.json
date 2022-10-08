@@ -55,7 +55,8 @@
     "nhentai": "^3.0.0",
     "xoriznapp": "^1.0.0",
     "y2mate-api": "^1.6.5",
-    "yt-search": "^2.10.3"
+    "yt-search": "^2.10.3",
+    "google-it": "^1.6.3"
   },
   "repository": {
     "type": "git",
